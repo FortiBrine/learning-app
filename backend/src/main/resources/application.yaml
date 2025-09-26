@@ -17,4 +17,4 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 security:
   jwt:
-    secret-key: AzomDE3TeXUOtYaOP/mkRvDd6br4l2Qm8RffNQkD1KE=
+    secret-key: ${JWT_TOKEN}
