@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: learningapp_backend
+    environment:
+      POSTGRESQL_URL: jdbc:postgresql://localhost:5432/learningapp
+      POSTGRESQL_USERNAME: learningapp
+      POSTGRESQL_PASSWORD: password
+      JWT_TOKEN: "oHLvbsOoBmR1ULVZT+eLXCCku/HVpHThZePvsHdaHvs=" 
+    ports:
+      - "127.0.0.1:8081:8080"
+    restart: unless-stopped
