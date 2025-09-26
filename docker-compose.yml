@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    build: backend
     container_name: learningapp_backend
     environment:
       POSTGRESQL_URL: jdbc:postgresql://localhost:5432/learningapp
