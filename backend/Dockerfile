@@ -4,12 +4,12 @@ WORKDIR /app
 
 RUN apk add --no-cache findutils bash
 
-COPY backend/gradle ./gradle
-COPY backend/build.gradle.kts backend/settings.gradle.kts backend/gradlew ./
+COPY gradle ./gradle
+COPY build.gradle.kts settings.gradle.kts gradlew ./
 
 RUN ./gradlew dependencies --no-daemon
 
-COPY backend/src ./src
+COPY src ./src
 
 RUN ./gradlew bootJar --no-daemon
 
